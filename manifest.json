@@ -1,0 +1,128 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "1.1.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "homepage_url": "https://burgmedia.eu/shop/burg-theme",
+  "icons": {
+    "16": "images/icon_16.png",
+    "32": "images/icon_32.png",
+    "48": "images/icon_48.png",
+    "128": "images/icon_128.png"
+  },
+  "theme": {
+    "images": {
+      "theme_ntp_background": {
+        "100_percent": "images/ntp.png",
+        "200_percent": "images/ntp@2x.png"
+      }
+    },
+    "colors": {
+      "frame": [
+        14,
+        14,
+        16
+      ],
+      "frame_inactive": [
+        14,
+        14,
+        16
+      ],
+      "frame_incognito": [
+        30,
+        30,
+        36
+      ],
+      "frame_incognito_inactive": [
+        30,
+        30,
+        36
+      ],
+      "toolbar": [
+        38,
+        37,
+        43
+      ],
+      "background_tab": [
+        14,
+        14,
+        16
+      ],
+      "background_tab_inactive": [
+        14,
+        14,
+        16
+      ],
+      "toolbar_text": [
+        244,
+        243,
+        240
+      ],
+      "toolbar_button_icon": [
+        244,
+        243,
+        240
+      ],
+      "tab_text": [
+        255,
+        92,
+        26
+      ],
+      "tab_background_text": [
+        165,
+        165,
+        173
+      ],
+      "tab_background_text_inactive": [
+        107,
+        103,
+        94
+      ],
+      "tab_background_text_incognito": [
+        165,
+        165,
+        173
+      ],
+      "bookmark_text": [
+        244,
+        243,
+        240
+      ],
+      "omnibox_background": [
+        14,
+        14,
+        16
+      ],
+      "omnibox_text": [
+        244,
+        243,
+        240
+      ],
+      "ntp_background": [
+        14,
+        14,
+        16
+      ],
+      "ntp_text": [
+        244,
+        243,
+        240
+      ],
+      "ntp_link": [
+        255,
+        92,
+        26
+      ],
+      "ntp_header": [
+        255,
+        92,
+        26
+      ]
+    },
+    "properties": {
+      "ntp_background_alignment": "bottom",
+      "ntp_background_repeat": "no-repeat"
+    }
+  }
+}

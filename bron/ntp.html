@@ -1,0 +1,114 @@
+<!doctype html>
+<!-- Source of images/ntp.png and ntp@2x.png. Render again with ./render.sh -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face { font-family: 'Clash Display'; font-weight: 600; src: url('fonts/clash-display-600.woff2') format('woff2'); }
+      @font-face { font-family: 'Clash Display'; font-weight: 700; src: url('fonts/clash-display-700.woff2') format('woff2'); }
+      @font-face { font-family: 'Geist Mono'; font-weight: 400; src: url('fonts/geist-mono-latin.woff2') format('woff2'); }
+
+      :root {
+        --ink: #0E0E10;
+        --line-dark: #2A2A30;
+        --muted-dark: #A5A5AD;
+        --text-dark: #F4F3F0;
+        --accent: #FF5C1A;
+        --tint-blue: #2E6BFF;
+      }
+
+      html, body {
+        margin: 0;
+        width: 2560px;
+        height: 1600px;
+        overflow: hidden;
+        background: var(--ink);
+      }
+
+      /* Chrome shows the image bottom-centered and crops the sides on narrower
+         screens: everything that must stay visible is within the middle ~1280px. */
+      .stage {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .grid-bg {
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+          to right,
+          transparent, transparent calc(100% / 20 - 1px),
+          var(--line-dark) calc(100% / 20 - 1px), var(--line-dark) calc(100% / 20)
+        );
+        opacity: 0.5;
+        -webkit-mask-image: linear-gradient(to top, black 0%, transparent 75%);
+      }
+
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(170px);
+      }
+      .blob--accent {
+        width: 980px; height: 980px;
+        right: 520px; bottom: -380px;
+        background: var(--accent);
+        opacity: 0.38;
+      }
+      .blob--blue {
+        width: 700px; height: 700px;
+        left: 560px; top: 120px;
+        background: var(--tint-blue);
+        opacity: 0.16;
+      }
+
+      .giant {
+        position: absolute;
+        left: 0; right: 0;
+        bottom: -32px;
+        font: 700 250px/0.9 'Clash Display', sans-serif;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: transparent;
+        -webkit-text-stroke: 2px rgba(244, 243, 240, 0.22);
+        white-space: nowrap;
+      }
+
+      .meta {
+        position: absolute;
+        left: 640px; right: 640px;
+        bottom: 290px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 22px;
+        border-top: 1px solid var(--line-dark);
+        font: 400 15px/1 'Geist Mono', monospace;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--muted-dark);
+      }
+      .meta .n { color: var(--accent); margin-right: 0.7em; }
+
+      .noise {
+        position: absolute;
+        inset: 0;
+        opacity: 0.05;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="grid-bg"></div>
+      <div class="blob blob--blue"></div>
+      <div class="blob blob--accent"></div>
+      <div class="meta">
+        <span><span class="n">●</span>Digital studio · Zoetermeer, NL</span>
+        <span>burgmedia.eu</span>
+      </div>
+      <div class="giant">BURGMEDIA</div>
+      <div class="noise"></div>
+    </div>
+  </body>
+</html>
